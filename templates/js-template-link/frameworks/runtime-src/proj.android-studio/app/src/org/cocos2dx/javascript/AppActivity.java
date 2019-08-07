@@ -27,10 +27,14 @@ package org.cocos2dx.javascript;
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 
+import android.app.ActivityManager;
 import android.os.Bundle;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.util.Log;
+
+import com.tencent.smtt.sdk.QbSdk;
 
 public class AppActivity extends Cocos2dxActivity {
 
@@ -45,8 +49,25 @@ public class AppActivity extends Cocos2dxActivity {
             // Don't need to finish it again since it's finished in super.onCreate .
             return;
         }
-        // DO OTHER INITIALIZATION BELOW
-        SDKWrapper.getInstance().init(this);
+
+        //搜集本地tbs内核信息并上报服务器，服务器返回结果决定使用哪个内核。
+
+        QbSdk.PreInitCallback cb = new QbSdk.PreInitCallback() {
+
+            @Override
+            public void onViewInitFinished(boolean arg0) {
+                // TODO Auto-generated method stub
+                //x5內核初始化完成的回调，为true表示x5内核加载成功，否则表示x5内核加载失败，会自动切换到系统内核。
+                Log.d("app", " onViewInitFinished is " + arg0);
+            }
+
+            @Override
+            public void onCoreInitFinished() {
+                // TODO Auto-generated method stub
+            }
+        };
+        //x5内核初始化接口
+        QbSdk.initX5Environment(getApplicationContext(),  cb);
 
     }
     
@@ -55,7 +76,6 @@ public class AppActivity extends Cocos2dxActivity {
         Cocos2dxGLSurfaceView glSurfaceView = new Cocos2dxGLSurfaceView(this);
         // TestCpp should create stencil buffer
         glSurfaceView.setEGLConfigChooser(5, 6, 5, 0, 16, 8);
-        SDKWrapper.getInstance().setGLSurfaceView(glSurfaceView, this);
 
         return glSurfaceView;
     }
@@ -63,75 +83,77 @@ public class AppActivity extends Cocos2dxActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        SDKWrapper.getInstance().onResume();
 
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        SDKWrapper.getInstance().onPause();
 
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        SDKWrapper.getInstance().onDestroy();
 
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        SDKWrapper.getInstance().onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        SDKWrapper.getInstance().onNewIntent(intent);
+
+        if ((intent.getFlags() | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT) > 0) {
+            if (android.os.Build.VERSION.SDK_INT >= 19 && !isTaskRoot()) {
+                ActivityManager tasksManager = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
+                tasksManager.moveTaskToFront(getTaskId(), ActivityManager.MOVE_TASK_NO_USER_ACTION);
+            }
+        }
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        SDKWrapper.getInstance().onRestart();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        SDKWrapper.getInstance().onStop();
     }
         
     @Override
     public void onBackPressed() {
-        SDKWrapper.getInstance().onBackPressed();
         super.onBackPressed();
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
-        SDKWrapper.getInstance().onConfigurationChanged(newConfig);
         super.onConfigurationChanged(newConfig);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        SDKWrapper.getInstance().onRestoreInstanceState(savedInstanceState);
         super.onRestoreInstanceState(savedInstanceState);
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        SDKWrapper.getInstance().onSaveInstanceState(outState);
         super.onSaveInstanceState(outState);
     }
 
     @Override
     protected void onStart() {
-        SDKWrapper.getInstance().onStart();
         super.onStart();
+    }
+
+    static public void openWeb(final String url) {
+        Intent it = new Intent(getContext(), CustomWeb.class);
+        it.putExtra("url", url);
+        it.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        getContext().startActivity(it);
     }
 }
