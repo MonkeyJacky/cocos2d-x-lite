@@ -27,16 +27,30 @@ package org.cocos2dx.javascript;
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 
+import android.Manifest;
 import android.app.ActivityManager;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 
 import com.tencent.smtt.sdk.QbSdk;
+import org.cocos2dx.javascript.CustomApi;
 
 public class AppActivity extends Cocos2dxActivity {
+    private static final String[] authBaseArr = {//申请类型
+            Manifest.permission.INTERNET,
+            Manifest.permission.ACCESS_NETWORK_STATE,
+            Manifest.permission.ACCESS_WIFI_STATE,
+            Manifest.permission.REORDER_TASKS,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.READ_PHONE_STATE,
+            Manifest.permission.CHANGE_WIFI_STATE,
+    };
+    private static final int authBaseRequestCode = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +63,10 @@ public class AppActivity extends Cocos2dxActivity {
             // Don't need to finish it again since it's finished in super.onCreate .
             return;
         }
+
+        initNavi();
+
+        CustomApi.setContext(getContext());
 
         //搜集本地tbs内核信息并上报服务器，服务器返回结果决定使用哪个内核。
 
@@ -155,5 +173,25 @@ public class AppActivity extends Cocos2dxActivity {
         it.putExtra("url", url);
         it.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         getContext().startActivity(it);
+    }
+
+    private void initNavi() {
+        // 申请权限
+        if (android.os.Build.VERSION.SDK_INT >= 23) {
+            if (!hasBasePhoneAuth()) {
+                ActivityCompat.requestPermissions(this, authBaseArr, authBaseRequestCode);
+                return;
+            }
+        }
+    }
+
+    private boolean hasBasePhoneAuth() {
+        PackageManager pm = getPackageManager();
+        for (String auth : authBaseArr) {
+            if (pm.checkPermission(auth, getPackageName()) != PackageManager.PERMISSION_GRANTED) {
+                return false;
+            }
+        }
+        return true;
     }
 }
