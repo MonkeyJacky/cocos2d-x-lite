@@ -79,7 +79,7 @@ return self;
 
 //fix not hide status on ios7
 - (BOOL)prefersStatusBarHidden {
-    return YES;
+    return NO;
 }
 
 // Controls the application's preferred home indicator auto-hiding when this view controller is shown.

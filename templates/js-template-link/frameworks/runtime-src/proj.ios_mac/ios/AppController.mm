@@ -32,7 +32,6 @@
 #import "platform/ios/CCEAGLView-ios.h"
 
 
-
 using namespace cocos2d;
 
 @implementation AppController
@@ -77,11 +76,10 @@ Application* app = nullptr;
     
     [window makeKeyAndVisible];
     
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     
     //run the cocos2d-x game scene
     app->start();
-    
     return YES;
 }
 
