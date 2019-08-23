@@ -83,6 +83,7 @@ public class Cocos2dxWebView extends WebView {
         this.getSettings().setJavaScriptEnabled(true);
         this.getSettings().setUseWideViewPort(true);
         this.getSettings().setLoadWithOverviewMode(true);
+        this.setBackgroundColor(0);
 
         // `searchBoxJavaBridge_` has big security risk. http://jvn.jp/en/jp/JVN53768697
         try {
