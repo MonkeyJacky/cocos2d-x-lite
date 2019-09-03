@@ -38,7 +38,7 @@ import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 
 import com.tencent.smtt.sdk.QbSdk;
-import org.cocos2dx.javascript.CustomApi;
+import org.cocos2dx.lib.Cocos2dxJavascriptJavaBridge;
 
 public class AppActivity extends Cocos2dxActivity {
     private static final String[] authBaseArr = {//申请类型
@@ -87,6 +87,8 @@ public class AppActivity extends Cocos2dxActivity {
         //x5内核初始化接口
         QbSdk.initX5Environment(getApplicationContext(),  cb);
 
+        appHandler(getIntent(), true);
+
     }
     
     @Override
@@ -102,6 +104,7 @@ public class AppActivity extends Cocos2dxActivity {
     protected void onResume() {
         super.onResume();
 
+        //appHandler("onResume");
     }
 
     @Override
@@ -124,6 +127,8 @@ public class AppActivity extends Cocos2dxActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+
+        appHandler(intent, false);
 
         if ((intent.getFlags() | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT) > 0) {
             if (android.os.Build.VERSION.SDK_INT >= 19 && !isTaskRoot()) {
@@ -193,5 +198,22 @@ public class AppActivity extends Cocos2dxActivity {
             }
         }
         return true;
+    }
+
+    private void appHandler(Intent intent, Boolean isLaunch) {
+        final String data = intent.getStringExtra("biwandata");
+        if (data != null) {
+            Log.d("appHandler", data);
+
+            if (isLaunch) CustomApi.setLaunchData(data);
+
+            runOnGLThread(new Runnable() {
+                @Override
+                public void run() {
+                    String command = "Utils.sdk.handler(\"" + data + "\")";
+                    Cocos2dxJavascriptJavaBridge.evalString(command);
+                }
+            });
+        }
     }
 }

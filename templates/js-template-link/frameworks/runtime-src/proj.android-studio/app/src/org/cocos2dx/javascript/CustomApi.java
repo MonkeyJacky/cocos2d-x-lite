@@ -1,6 +1,7 @@
 package org.cocos2dx.javascript;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.telephony.TelephonyManager;
@@ -28,6 +29,40 @@ public class CustomApi {
     }
     private static final String marshmallowMacAddress = "02:00:00:00:00:00";
     private static final String fileAddressMac = "/sys/class/net/wlan0/address";
+    public static String pkgname = null;
+    private static String lauchdata = null;
+
+    public static void setLaunchData(String data) {
+        lauchdata = data;
+    }
+
+    public static String getLaunchDataOnce() {
+        final String tmp = lauchdata;
+        lauchdata = null;
+
+        return tmp;
+    }
+
+    public static void backAuthorising(final String objpkg, final String code) {
+        openAppByPackageName(objpkg, "auth&"+code);
+    }
+
+    public static void openAppByPackageName(final String objpkg, final String data) {
+        Intent intent = context.getPackageManager().getLaunchIntentForPackage(objpkg);
+        if (intent != null) {
+            intent.putExtra("biwandata", data);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
+        }
+    }
+
+    public static void openAppByPackageName(final String objpkg) {
+        Intent intent = context.getPackageManager().getLaunchIntentForPackage(objpkg);
+        if (intent != null) {
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
+        }
+    }
 
     public static String getImei(){
         String imei = "";
