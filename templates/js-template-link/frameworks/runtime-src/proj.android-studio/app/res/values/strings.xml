@@ -1,5 +1,3 @@
 <resources>
-    <string name="app_name" translatable="false">biwan</string>
-    <string name="back_btn_name" translatable="false">back</string>
-    <string name="quit_btn_name" translatable="false">quit</string>
+    <string name="app_name" translatable="false">HelloJavascript</string>
 </resources>

@@ -46,9 +46,6 @@
 		509D4AE717EBB81800697056 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509D4AE617EBB81800697056 /* OpenGL.framework */; };
 		509D4AE917EBB82000697056 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509D4AE817EBB82000697056 /* AppKit.framework */; };
 		509D4AEB17EBB82600697056 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509D4AEA17EBB82600697056 /* IOKit.framework */; };
-		85D639E322FEC4CB003E8393 /* CustomWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D639E222FEC4CB003E8393 /* CustomWebView.m */; };
-		85D639E522FECABA003E8393 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D639E422FECAB9003E8393 /* WebKit.framework */; };
-		85DB32BC22FE66FF00E8AB5E /* CustomApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DB32BB22FE66FF00E8AB5E /* CustomApi.m */; };
 		A92275421517C094001B78AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92275411517C094001B78AA /* QuartzCore.framework */; };
 		A92275441517C094001B78AA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92275431517C094001B78AA /* OpenGLES.framework */; };
 		A92275461517C094001B78AA /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A92275451517C094001B78AA /* OpenAL.framework */; };
@@ -122,7 +119,7 @@
 		1A82F5FA169AC92500C4B13A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		1A96A4F2174A3432008653A9 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = "../../cocos2d-x/cocos2dx/platform/third_party/ios/libraries/libcurl.a"; sourceTree = "<group>"; };
 		1ABC56911F7A005D00826282 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ios/Images.xcassets; sourceTree = "<group>"; };
-		1AC6FB34180E9ACB004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = "/Users/jacky/Projects/cocos2d-x-lite/build/cocos2d_libs.xcodeproj"; sourceTree = "<absolute>"; };
+		1AC6FB34180E9ACB004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = "/Applications/CocosCreator.app/Contents/Resources/cocos2d-x/build/cocos2d_libs.xcodeproj"; sourceTree = "<absolute>"; };
 		1ACA99221F550A20002DE225 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		1ACA99241F550A28002DE225 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		1AFFCD7B1F7A5D4F00628F2C /* LaunchScreenBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LaunchScreenBackground.png; path = ios/LaunchScreenBackground.png; sourceTree = "<group>"; };
@@ -135,10 +132,10 @@
 		4011F9D8212BD7150091CC5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4011F9D9212BD73A0091CC5B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4033CDBB20E4935000DAA37B /* jsb-adapter */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "jsb-adapter"; path = "../../../jsb-adapter"; sourceTree = "<group>"; };
-		4D697BD91CBD301C00A5AF29 /* libjs_static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjs_static.a; path = "/Users/jacky/Projects/cocos2d-x-lite/external/ios/libs/libjs_static.a"; sourceTree = "<absolute>"; };
-		4D697BDC1CBD303100A5AF29 /* libjs_static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjs_static.a; path = "/Users/jacky/Projects/cocos2d-x-lite/external/mac/libs/libjs_static.a"; sourceTree = "<absolute>"; };
+		4D697BD91CBD301C00A5AF29 /* libjs_static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjs_static.a; path = "/Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/libs/libjs_static.a"; sourceTree = "<absolute>"; };
+		4D697BDC1CBD303100A5AF29 /* libjs_static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjs_static.a; path = "/Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/mac/libs/libjs_static.a"; sourceTree = "<absolute>"; };
 		502380DB17EBB88200990C9B /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
-		509D4AAA17EBB24E00697056 /* biwan-desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "biwan-desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		509D4AAA17EBB24E00697056 /* HelloJavascript-desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloJavascript-desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		509D4AAB17EBB2AB00697056 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = "<group>"; };
 		509D4AAC17EBB2AB00697056 /* AppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppController.mm; path = ios/AppController.mm; sourceTree = "<group>"; };
 		509D4AB717EBB2AB00697056 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ios/Info.plist; sourceTree = "<group>"; };
@@ -152,13 +149,7 @@
 		509D4AE617EBB81800697056 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		509D4AE817EBB82000697056 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		509D4AEA17EBB82600697056 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		85D639E122FEC4CB003E8393 /* CustomWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomWebView.h; sourceTree = "<group>"; };
-		85D639E222FEC4CB003E8393 /* CustomWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomWebView.m; sourceTree = "<group>"; };
-		85D639E422FECAB9003E8393 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
-		85DB32BA22FE66FF00E8AB5E /* CustomApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomApi.h; sourceTree = "<group>"; };
-		85DB32BB22FE66FF00E8AB5E /* CustomApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomApi.m; sourceTree = "<group>"; };
-		85DB32BD22FE748D00E8AB5E /* biwan-mobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "biwan-mobile.entitlements"; sourceTree = "<group>"; };
-		A922753D1517C094001B78AA /* biwan-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "biwan-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A922753D1517C094001B78AA /* HelloJavascript-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloJavascript-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92275411517C094001B78AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A92275431517C094001B78AA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		A92275451517C094001B78AA /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -217,7 +208,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85D639E522FECABA003E8393 /* WebKit.framework in Frameworks */,
 				1A37E9DA200DEF120078AF72 /* SystemConfiguration.framework in Frameworks */,
 				1ACA99251F550A28002DE225 /* JavaScriptCore.framework in Frameworks */,
 				1A499EBD1F0CDDD9004E6AEC /* libicucore.A.tbd in Frameworks */,
@@ -292,26 +282,9 @@
 			path = mac;
 			sourceTree = "<group>";
 		};
-		854171E52302A58B0035A878 /* 3rd */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = 3rd;
-			sourceTree = "<group>";
-		};
-		85DB32B322FE52D100E8AB5E /* webview */ = {
-			isa = PBXGroup;
-			children = (
-				85D639E122FEC4CB003E8393 /* CustomWebView.h */,
-				85D639E222FEC4CB003E8393 /* CustomWebView.m */,
-			);
-			path = webview;
-			sourceTree = "<group>";
-		};
 		A92275321517C094001B78AA = {
 			isa = PBXGroup;
 			children = (
-				85DB32BD22FE748D00E8AB5E /* biwan-mobile.entitlements */,
 				28A34C0F225B462E00926306 /* subpackages */,
 				1AC6FB34180E9ACB004C840B /* cocos2d_libs.xcodeproj */,
 				D4545214156E28EF00887EB5 /* Classes */,
@@ -326,8 +299,8 @@
 		A922753E1517C094001B78AA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A922753D1517C094001B78AA /* biwan-mobile.app */,
-				509D4AAA17EBB24E00697056 /* biwan-desktop.app */,
+				A922753D1517C094001B78AA /* HelloJavascript-mobile.app */,
+				509D4AAA17EBB24E00697056 /* HelloJavascript-desktop.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -335,7 +308,6 @@
 		A92275401517C094001B78AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				85D639E422FECAB9003E8393 /* WebKit.framework */,
 				1A37E9D9200DEF110078AF72 /* SystemConfiguration.framework */,
 				1A37E9DB200DEF190078AF72 /* SystemConfiguration.framework */,
 				1ACA99241F550A28002DE225 /* JavaScriptCore.framework */,
@@ -379,8 +351,6 @@
 		D45446CC156DE73F00887EB5 /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				854171E52302A58B0035A878 /* 3rd */,
-				85DB32B322FE52D100E8AB5E /* webview */,
 				051C018221E32AE400D4A347 /* UserConfigIOS.debug.xcconfig */,
 				051C018121E32AE400D4A347 /* UserConfigIOS.release.xcconfig */,
 				22CC756E21BA5B5C00FBF2F7 /* service */,
@@ -396,8 +366,6 @@
 				509D4ABB17EBB2AB00697056 /* RootViewController.mm */,
 				22CC757021BA5B5C00FBF2F7 /* SDKWrapper.h */,
 				22CC756D21BA5B5C00FBF2F7 /* SDKWrapper.m */,
-				85DB32BA22FE66FF00E8AB5E /* CustomApi.h */,
-				85DB32BB22FE66FF00E8AB5E /* CustomApi.m */,
 			);
 			name = ios;
 			sourceTree = "<group>";
@@ -415,9 +383,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		509D4A7517EBB24E00697056 /* biwan-desktop */ = {
+		509D4A7517EBB24E00697056 /* HelloJavascript-desktop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 509D4AA717EBB24E00697056 /* Build configuration list for PBXNativeTarget "biwan-desktop" */;
+			buildConfigurationList = 509D4AA717EBB24E00697056 /* Build configuration list for PBXNativeTarget "HelloJavascript-desktop" */;
 			buildPhases = (
 				509D4A8017EBB24E00697056 /* Sources */,
 				509D4A9317EBB24E00697056 /* Resources */,
@@ -428,14 +396,14 @@
 			dependencies = (
 				4DD5E6AA1CDAF6330046171E /* PBXTargetDependency */,
 			);
-			name = "biwan-desktop";
-			productName = biwan;
-			productReference = 509D4AAA17EBB24E00697056 /* biwan-desktop.app */;
+			name = "HelloJavascript-desktop";
+			productName = HelloJavascript;
+			productReference = 509D4AAA17EBB24E00697056 /* HelloJavascript-desktop.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A922753C1517C094001B78AA /* biwan-mobile */ = {
+		A922753C1517C094001B78AA /* HelloJavascript-mobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A92277001517C097001B78AA /* Build configuration list for PBXNativeTarget "biwan-mobile" */;
+			buildConfigurationList = A92277001517C097001B78AA /* Build configuration list for PBXNativeTarget "HelloJavascript-mobile" */;
 			buildPhases = (
 				A92275391517C094001B78AA /* Sources */,
 				A922753A1517C094001B78AA /* Frameworks */,
@@ -446,9 +414,9 @@
 			dependencies = (
 				4DD5E6B01CDAF6520046171E /* PBXTargetDependency */,
 			);
-			name = "biwan-mobile";
-			productName = biwan;
-			productReference = A922753D1517C094001B78AA /* biwan-mobile.app */;
+			name = "HelloJavascript-mobile";
+			productName = HelloJavascript;
+			productReference = A922753D1517C094001B78AA /* HelloJavascript-mobile.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -458,19 +426,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
-				TargetAttributes = {
-					A922753C1517C094001B78AA = {
-						DevelopmentTeam = A5TPFPYK62;
-						ProvisioningStyle = Manual;
-						SystemCapabilities = {
-							com.apple.AccessWiFi = {
-								enabled = 1;
-							};
-						};
-					};
-				};
 			};
-			buildConfigurationList = A92275371517C094001B78AA /* Build configuration list for PBXProject "biwan" */;
+			buildConfigurationList = A92275371517C094001B78AA /* Build configuration list for PBXProject "HelloJavascript" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -490,8 +447,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				A922753C1517C094001B78AA /* biwan-mobile */,
-				509D4A7517EBB24E00697056 /* biwan-desktop */,
+				A922753C1517C094001B78AA /* HelloJavascript-mobile */,
+				509D4A7517EBB24E00697056 /* HelloJavascript-desktop */,
 			);
 		};
 /* End PBXProject section */
@@ -561,12 +518,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				509D4AC917EBB2AB00697056 /* RootViewController.mm in Sources */,
-				85DB32BC22FE66FF00E8AB5E /* CustomApi.m in Sources */,
 				D4545227156E28EF00887EB5 /* AppDelegate.cpp in Sources */,
 				509D4AC817EBB2AB00697056 /* main.m in Sources */,
 				22CC757121BA5B5C00FBF2F7 /* SDKWrapper.m in Sources */,
 				509D4ABC17EBB2AB00697056 /* AppController.mm in Sources */,
-				85D639E322FEC4CB003E8393 /* CustomWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,10 +581,10 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = mac/Info.plist;
-				LIBRARY_SEARCH_PATHS = "/Users/jacky/Projects/cocos2d-x-lite/external/mac/libs";
+				LIBRARY_SEARCH_PATHS = "/Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/mac/libs";
 				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "$(inherited) /Users/jacky/Projects/cocos2d-x-lite/cocos/platform/mac /Users/jacky/Projects/cocos2d-x-lite/external/glfw3/include/mac /Users/jacky/Projects/cocos2d-x-lite/external/mac/include/ /Users/jacky/Projects/cocos2d-x-lite/external/mac/include/spidermonkey";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/platform/mac /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/glfw3/include/mac /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/mac/include/ /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/mac/include/spidermonkey";
 			};
 			name = Debug;
 		};
@@ -651,10 +606,10 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = mac/Info.plist;
-				LIBRARY_SEARCH_PATHS = "/Users/jacky/Projects/cocos2d-x-lite/external/mac/libs";
+				LIBRARY_SEARCH_PATHS = "/Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/mac/libs";
 				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
-				USER_HEADER_SEARCH_PATHS = "$(inherited) /Users/jacky/Projects/cocos2d-x-lite/cocos/platform/mac /Users/jacky/Projects/cocos2d-x-lite/external/glfw3/include/mac /Users/jacky/Projects/cocos2d-x-lite/external/mac/include/ /Users/jacky/Projects/cocos2d-x-lite/external/mac/include/spidermonkey";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/platform/mac /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/glfw3/include/mac /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/mac/include/ /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/mac/include/spidermonkey";
 			};
 			name = Release;
 		};
@@ -680,7 +635,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "/Users/jacky/Projects/cocos2d-x-lite /Users/jacky/Projects/cocos2d-x-lite/cocos /Users/jacky/Projects/cocos2d-x-lite/cocos/base /Users/jacky/Projects/cocos2d-x-lite/cocos/physics /Users/jacky/Projects/cocos2d-x-lite/cocos/math/kazmath /Users/jacky/Projects/cocos2d-x-lite/cocos/2d /Users/jacky/Projects/cocos2d-x-lite/cocos/gui /Users/jacky/Projects/cocos2d-x-lite/cocos/network /Users/jacky/Projects/cocos2d-x-lite/cocos/audio/include /Users/jacky/Projects/cocos2d-x-lite/cocos/editor-support /Users/jacky/Projects/cocos2d-x-lite/extensions /Users/jacky/Projects/cocos2d-x-lite/external /Users/jacky/Projects/cocos2d-x-lite/external/sources /Users/jacky/Projects/cocos2d-x-lite/external/chipmunk/include/chipmunk /Users/jacky/Projects/cocos2d-x-lite/external/mac/include/v8 /Users/jacky/Projects/cocos2d-x-lite/cocos/scripting/js-bindings/auto /Users/jacky/Projects/cocos2d-x-lite/cocos/scripting/js-bindings/manual /Users/jacky/Projects/cocos2d-x-lite/cocos/renderer";
+				USER_HEADER_SEARCH_PATHS = "/Applications/CocosCreator.app/Contents/Resources/cocos2d-x /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/base /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/physics /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/math/kazmath /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/2d /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/gui /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/network /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/audio/include /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/editor-support /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/extensions /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/sources /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/chipmunk/include/chipmunk /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/mac/include/v8 /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/scripting/js-bindings/auto /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/scripting/js-bindings/manual /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/renderer";
 			};
 			name = Debug;
 		};
@@ -703,7 +658,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "/Users/jacky/Projects/cocos2d-x-lite /Users/jacky/Projects/cocos2d-x-lite/cocos /Users/jacky/Projects/cocos2d-x-lite/cocos/base /Users/jacky/Projects/cocos2d-x-lite/cocos/physics /Users/jacky/Projects/cocos2d-x-lite/cocos/math/kazmath /Users/jacky/Projects/cocos2d-x-lite/cocos/2d /Users/jacky/Projects/cocos2d-x-lite/cocos/gui /Users/jacky/Projects/cocos2d-x-lite/cocos/network /Users/jacky/Projects/cocos2d-x-lite/cocos/audio/include /Users/jacky/Projects/cocos2d-x-lite/cocos/editor-support /Users/jacky/Projects/cocos2d-x-lite/extensions /Users/jacky/Projects/cocos2d-x-lite/external /Users/jacky/Projects/cocos2d-x-lite/external/sources /Users/jacky/Projects/cocos2d-x-lite/external/chipmunk/include/chipmunk /Users/jacky/Projects/cocos2d-x-lite/external/mac/include/v8 /Users/jacky/Projects/cocos2d-x-lite/cocos/scripting/js-bindings/auto /Users/jacky/Projects/cocos2d-x-lite/cocos/scripting/js-bindings/manual /Users/jacky/Projects/cocos2d-x-lite/cocos/renderer";
+				USER_HEADER_SEARCH_PATHS = "/Applications/CocosCreator.app/Contents/Resources/cocos2d-x /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/base /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/physics /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/math/kazmath /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/2d /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/gui /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/network /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/audio/include /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/editor-support /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/extensions /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/sources /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/chipmunk/include/chipmunk /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/mac/include/v8 /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/scripting/js-bindings/auto /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/scripting/js-bindings/manual /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/renderer";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -714,18 +669,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "biwan-mobile.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
 				COMPRESS_PNG_FILES = NO;
-				DEVELOPMENT_TEAM = A5TPFPYK62;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/3td",
-					"$(PROJECT_DIR)/3rd",
-					"$(PROJECT_DIR)",
-				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -735,20 +681,18 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/3td";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "/Users/jacky/Projects/cocos2d-x-lite/external/ios/libs";
+				LIBRARY_SEARCH_PATHS = "/Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/libs";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
 				);
-				PROVISIONING_PROFILE_SPECIFIER = "biwan-test";
 				SDKROOT = iphoneos;
 				STRIP_PNG_TEXT = NO;
-				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "$(inherited) /Users/jacky/Projects/cocos2d-x-lite/cocos/platform/ios /Users/jacky/Projects/cocos2d-x-lite/plugin/jsbindings/auto /Users/jacky/Projects/cocos2d-x-lite/plugin/jsbindings/manual /Users/jacky/Projects/cocos2d-x-lite/external/ios/include /Users/jacky/Projects/cocos2d-x-lite/external/ios/include/spidermonkey";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/platform/ios /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/plugin/jsbindings/auto /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/plugin/jsbindings/manual /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/spidermonkey";
 				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Debug;
@@ -759,18 +703,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "biwan-mobile.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
 				COMPRESS_PNG_FILES = NO;
-				DEVELOPMENT_TEAM = A5TPFPYK62;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/3td",
-					"$(PROJECT_DIR)/3rd",
-					"$(PROJECT_DIR)",
-				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
@@ -779,20 +714,18 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/3td";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "/Users/jacky/Projects/cocos2d-x-lite/external/ios/libs";
+				LIBRARY_SEARCH_PATHS = "/Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/libs";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"$(inherited)",
 				);
-				PROVISIONING_PROFILE_SPECIFIER = "biwan-test";
 				SDKROOT = iphoneos;
 				STRIP_PNG_TEXT = NO;
-				TARGETED_DEVICE_FAMILY = 1;
-				USER_HEADER_SEARCH_PATHS = "$(inherited) /Users/jacky/Projects/cocos2d-x-lite/cocos/platform/ios /Users/jacky/Projects/cocos2d-x-lite/plugin/jsbindings/auto /Users/jacky/Projects/cocos2d-x-lite/plugin/jsbindings/manual /Users/jacky/Projects/cocos2d-x-lite/external/ios/include /Users/jacky/Projects/cocos2d-x-lite/external/ios/include/spidermonkey";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/cocos/platform/ios /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/plugin/jsbindings/auto /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/plugin/jsbindings/manual /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include /Applications/CocosCreator.app/Contents/Resources/cocos2d-x/external/ios/include/spidermonkey";
 				VALID_ARCHS = "arm64 armv7";
 			};
 			name = Release;
@@ -800,7 +733,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		509D4AA717EBB24E00697056 /* Build configuration list for PBXNativeTarget "biwan-desktop" */ = {
+		509D4AA717EBB24E00697056 /* Build configuration list for PBXNativeTarget "HelloJavascript-desktop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				509D4AA817EBB24E00697056 /* Debug */,
@@ -809,7 +742,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A92275371517C094001B78AA /* Build configuration list for PBXProject "biwan" */ = {
+		A92275371517C094001B78AA /* Build configuration list for PBXProject "HelloJavascript" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A92276FE1517C097001B78AA /* Debug */,
@@ -818,7 +751,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A92277001517C097001B78AA /* Build configuration list for PBXNativeTarget "biwan-mobile" */ = {
+		A92277001517C097001B78AA /* Build configuration list for PBXNativeTarget "HelloJavascript-mobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A92277011517C097001B78AA /* Debug */,
