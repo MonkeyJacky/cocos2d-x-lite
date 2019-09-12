@@ -134,6 +134,8 @@ static std::string getFixedBaseUrl(const std::string& baseUrl)
     if (!self.uiWebView) {
         self.uiWebView = [[[UIWebView alloc] init] autorelease];
         self.uiWebView.delegate = self;
+        [self.uiWebView setOpaque:NO];
+        [self.uiWebView setBackgroundColor:[UIColor clearColor]];
     }
     self.uiWebView.allowsInlineMediaPlayback = YES;
     if (!self.uiWebView.superview) {
@@ -152,8 +154,10 @@ static std::string getFixedBaseUrl(const std::string& baseUrl)
 
 - (void)setFrameWithX:(float)x y:(float)y width:(float)width height:(float)height {
     if (!self.uiWebView) {[self setupWebView];}
-    CGRect newFrame = CGRectMake(x, y, width, height);
-    if (!CGRectEqualToRect(self.uiWebView.frame, newFrame)) {
+    CGRect newFrame = CGRectMake(floorf(x), floorf(y), floorf(width), floorf(height));
+    CGRect oldFrame = CGRectMake(floorf(self.uiWebView.frame.origin.x), floorf(self.uiWebView.frame.origin.y), floorf(self.uiWebView.frame.size.width), floorf(self.uiWebView.frame.size.height));
+//    NSLog(@"x->%f y->%f width->%f height->%f", self.uiWebView.frame.origin.x, self.uiWebView.frame.origin.y, self.uiWebView.frame.size.width, self.uiWebView.frame.size.height);
+    if (!CGRectEqualToRect(oldFrame, newFrame)) {
         self.uiWebView.frame = CGRectMake(x, y, width, height);
     }
 }
