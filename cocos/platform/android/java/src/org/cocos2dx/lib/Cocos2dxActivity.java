@@ -308,7 +308,7 @@ public abstract class Cocos2dxActivity extends Activity implements Cocos2dxHelpe
             return;
         }
 
-        Utils.hideVirtualButton();
+//        Utils.hideVirtualButton();
 
         Cocos2dxHelper.registerBatteryLevelReceiver(this);
 
@@ -341,7 +341,7 @@ public abstract class Cocos2dxActivity extends Activity implements Cocos2dxHelpe
     	Log.d(TAG, "onResume()");
         super.onResume();
         Cocos2dxAudioFocusManager.registerAudioFocusListener(this);
-        Utils.hideVirtualButton();
+//        Utils.hideVirtualButton();
        	resumeIfHasFocus();
     }
 
@@ -356,7 +356,7 @@ public abstract class Cocos2dxActivity extends Activity implements Cocos2dxHelpe
 
     private void resumeIfHasFocus() {
         if(hasFocus) {
-            Utils.hideVirtualButton();
+//            Utils.hideVirtualButton();
             Cocos2dxHelper.onResume();
             mGLSurfaceView.onResume();
         }
