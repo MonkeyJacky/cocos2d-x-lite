@@ -346,7 +346,7 @@ public class Cocos2dxEditBox {
 
 
     private void hide() {
-        //Utils.hideVirtualButton();
+        Utils.hideVirtualButton();
         mEditText.hide();
         mButtonLayout.setVisibility(View.INVISIBLE);
         this.closeKeyboard();
